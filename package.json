@@ -1,0 +1,23 @@
+{
+  "name": "wogaa_flutter_tracker",
+  "version": "0.0.1",
+  "description": "wogaa flutter tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.ship.gov.sg/scm/aw/wogaa_flutter_tracker.git"
+  },
+  "author": "chuk_yih_jou@tech.gov.sg",
+  "license": "ISC",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
