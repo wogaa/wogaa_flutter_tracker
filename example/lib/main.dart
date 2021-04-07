@@ -20,17 +20,9 @@ class RandomWords extends StatefulWidget {
 }
 
 class _RandomWordsState extends State<RandomWords> {
-  Calculator calculator;
-
   @override
   void initState() {
-    calculator = Calculator();
-    print(calculator.addOne(2));
-
-    calculator.start();
-
-    print('This will be logged to the console in the browser');
-
+    Tracker.start();
     super.initState();
   }
 
@@ -66,7 +58,7 @@ class _RandomWordsState extends State<RandomWords> {
         color: alreadySaved ? Colors.red : null,
       ),
       onTap: () {
-        calculator.trackScreenView();
+        Tracker.trackScreenView('view1');
 
         // NEW lines from here...
         setState(() {
