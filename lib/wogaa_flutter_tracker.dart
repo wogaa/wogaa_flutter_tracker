@@ -1,20 +1,32 @@
 library wogaa_flutter_tracker;
 
-import 'package:snowplow_flutter_tracker/snowplow_flutter_tracker.dart';
+import 'package:snowplow_flutter_tracker/snowplow_flutter_tracker.dart' as sp;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 2;
+/// WOGAA Tracker
+class Tracker {
+  // Singleton
+  static final Tracker _instance = Tracker._internal();
 
-  /* Initialize it */
-  SnowplowFlutterTracker _tracker;
+  factory Tracker() {
+    return _instance;
+  }
 
-  void start() {
-    final emitter = Emitter(
-        uri: 'snowplow.dcube.cloud', requestSecurity: RequestSecurity.https);
+  Tracker._internal();
 
-    final tracker = Tracker(
+  // Snowplow tracker
+  static sp.SnowplowFlutterTracker _tracker;
+
+  static void start({String env: 'staging'}) {
+    if (_tracker != null) {
+      // do not init the tracker again
+      print('do not init tracker again');
+      return;
+    }
+
+    final emitter = sp.Emitter(
+        uri: 'snowplow.dcube.cloud', requestSecurity: sp.RequestSecurity.https);
+
+    final tracker = sp.Tracker(
         emitter: emitter,
         namespace: 'FlutterName Development',
         appId: 'sg.wogaa.trackerdemoapp',
@@ -28,17 +40,21 @@ class Calculator {
         backgroundTimeout: 300,
         installTracking: true,
         screenViewEvents: true,
-        logLevel: LogLevel.verbose,
-        devicePlatform: DevicePlatforms.mobile);
-    _tracker = SnowplowFlutterTracker();
+        logLevel: sp.LogLevel.verbose,
+        devicePlatform: sp.DevicePlatforms.mobile);
+    _tracker = sp.SnowplowFlutterTracker();
     _tracker.initialize(tracker);
 
-    print('This will be logged to the console in the browser');
+    print('Started (0.0.2)');
   }
 
-  void trackScreenView() {
-    ScreenView screenView = ScreenView(name: 'view1');
+  static void trackScreenView(String screenName) {
+    if (_tracker == null) {
+      print('Tracker is not yet started.');
+      return;
+    }
+
+    sp.ScreenView screenView = sp.ScreenView(name: screenName);
     _tracker.track(screenView);
-    print('track track');
   }
 }
