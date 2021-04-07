@@ -15,6 +15,9 @@
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0"
   },
+  "standard-version": {
+    "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
