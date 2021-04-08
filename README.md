@@ -1,5 +1,5 @@
 # WOGAA Flutter Tracker
-[![release](https://img.shields.io/badge/release-v0.0.2-green.svg)](https://semver.org)
+[![release](https://img.shields.io/badge/release-v0.0.3-green.svg)](https://semver.org)
 
 Flutter package library for WOGAA tracking
 
