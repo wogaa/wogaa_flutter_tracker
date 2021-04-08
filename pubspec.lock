@@ -90,9 +90,9 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: HEAD
-      resolved-ref: cff05d95d575cda6bf1ff01723b6b799102dca2f
-      url: "https://github.com/HomeXLabs/snowplow-flutter-tracker.git"
+      ref: develop
+      resolved-ref: fbfd742b672e259480860952a33c0e1c47853d0a
+      url: "https://github.com/chukyihjou-govtech/snowplow-flutter-tracker.git"
     source: git
     version: "0.11.0"
   source_span:
