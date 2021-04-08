@@ -1,6 +1,6 @@
 name: wogaa_flutter_tracker
 description: A new Flutter package project.
-version: 0.0.2
+version: 0.0.3
 author:
 homepage:
 
@@ -17,7 +17,8 @@ dependencies:
     sdk: flutter
   snowplow_flutter_tracker:
     git:
-      url: https://github.com/HomeXLabs/snowplow-flutter-tracker.git
+      url: https://github.com/chukyihjou-govtech/snowplow-flutter-tracker.git
+      ref: develop
 
 dev_dependencies:
   flutter_test:

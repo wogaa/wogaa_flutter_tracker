@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 
 
+### 0.0.3 (2021-04-08)
+
+
+### Bug Fixes
+
+* fix android useragent is null problem [WOGAA-4282] ([be59f13](https://bitbucket.ship.gov.sg///commit/be59f13dc39d1bccb484545e3bf6410f594c6adc))
+
+
+
 ### 0.0.2 (2021-04-07)
 
 
