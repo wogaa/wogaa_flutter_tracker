@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 
 
+### 0.0.4 (2021-04-09)
+
+
+### Features
+
+* readme updated and testing bamboo integration [WOGAA-4282] ([838da3c](https://bitbucket.ship.gov.sg///commit/838da3c201d48d2eaaf82921dab1956cafdf8289))
+
+
+
 ### 0.0.3 (2021-04-08)
 
 
