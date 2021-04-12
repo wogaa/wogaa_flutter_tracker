@@ -15,6 +15,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  package_info: ^2.0.0
   snowplow_flutter_tracker:
     git:
       url: https://github.com/chukyihjou-govtech/snowplow-flutter-tracker.git

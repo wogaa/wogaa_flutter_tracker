@@ -1,6 +1,7 @@
 library wogaa_flutter_tracker;
 
 import 'package:snowplow_flutter_tracker/snowplow_flutter_tracker.dart' as sp;
+import 'package:package_info/package_info.dart';
 
 /// WOGAA Tracker
 class Tracker {
@@ -16,20 +17,30 @@ class Tracker {
   // Snowplow tracker
   static sp.SnowplowFlutterTracker _tracker;
 
-  static void start({String env: 'staging'}) {
+  static void start({String env: 'staging'}) async {
     if (_tracker != null) {
       // do not init the tracker again
       print('do not init tracker again');
       return;
     }
 
+    String collectorUrl = 'snowplow.dcube.cloud';
+    sp.LogLevel logLevel = sp.LogLevel.verbose;
+
+    if (env == 'production') {
+      collectorUrl = 'snowplow-mobile.wogaa.sg';
+      logLevel = sp.LogLevel.error;
+    }
+
     final emitter = sp.Emitter(
-        uri: 'snowplow.dcube.cloud', requestSecurity: sp.RequestSecurity.https);
+        uri: collectorUrl, requestSecurity: sp.RequestSecurity.https);
+
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
 
     final tracker = sp.Tracker(
         emitter: emitter,
-        namespace: 'FlutterName Development',
-        appId: 'sg.wogaa.trackerdemoapp',
+        namespace: 'Tracker ${env == 'production' ? 'Production' : 'Staging'}',
+        appId: packageInfo.packageName,
         mobileContext: true,
         base64: false,
         applicationContext: true,
@@ -40,12 +51,12 @@ class Tracker {
         backgroundTimeout: 300,
         installTracking: true,
         screenViewEvents: true,
-        logLevel: sp.LogLevel.verbose,
+        logLevel: logLevel,
         devicePlatform: sp.DevicePlatforms.mobile);
     _tracker = sp.SnowplowFlutterTracker();
     _tracker.initialize(tracker);
 
-    print('Started (0.0.2)');
+    print('Started (0.0.4)');
   }
 
   static void trackScreenView(String screenName) {
