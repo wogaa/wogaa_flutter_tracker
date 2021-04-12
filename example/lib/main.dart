@@ -58,9 +58,10 @@ class _RandomWordsState extends State<RandomWords> {
         color: alreadySaved ? Colors.red : null,
       ),
       onTap: () {
-        Tracker.trackScreenView('view1');
-
         // NEW lines from here...
+        Tracker.trackEvent(
+            "Test Category", "Test Action", "Test Label", "Test Property", 999);
+
         setState(() {
           if (alreadySaved) {
             _saved.remove(pair);
@@ -70,6 +71,11 @@ class _RandomWordsState extends State<RandomWords> {
         });
       },
     );
+  }
+
+  void _navigateMainPage() {
+    Tracker.trackScreenView('view1');
+    Navigator.pop(context);
   }
 
   void _pushSaved() {
@@ -92,9 +98,15 @@ class _RandomWordsState extends State<RandomWords> {
             tiles: tiles,
           ).toList();
 
+          Tracker.trackScreenView('view2');
+
           return Scaffold(
             appBar: AppBar(
               title: Text('Saved Suggestions'),
+              leading: IconButton(
+                icon: Icon(Icons.arrow_back_ios),
+                onPressed: _navigateMainPage,
+              ),
             ),
             body: ListView(children: divided),
           );
@@ -108,6 +120,13 @@ class _RandomWordsState extends State<RandomWords> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Startup Name Generator'),
+        leading: IconButton(
+          icon: Icon(Icons.warning),
+          onPressed: () {
+            var fixedLengthList = List<int>.filled(5, 0);
+            fixedLengthList.length = 0; // Error
+          },
+        ),
         actions: [
           IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
         ],
