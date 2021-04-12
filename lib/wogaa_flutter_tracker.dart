@@ -52,6 +52,7 @@ class Tracker {
         installTracking: true,
         screenViewEvents: true,
         logLevel: logLevel,
+        exceptionEvents: true,
         devicePlatform: sp.DevicePlatforms.mobile);
     _tracker = sp.SnowplowFlutterTracker();
     _tracker.initialize(tracker);
@@ -67,5 +68,17 @@ class Tracker {
 
     sp.ScreenView screenView = sp.ScreenView(name: screenName);
     _tracker.track(screenView);
+  }
+
+  static void trackEvent(String category, String action, String label,
+      String property, double value) {
+    final structured = sp.Structured(
+      category: category,
+      action: action,
+      label: label,
+      property: property,
+      value: value,
+    );
+    _tracker.track(structured);
   }
 }
