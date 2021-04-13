@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 
-## 1.0.1 (2021-04-13)
+### 1.0.1 (2021-04-13)
 
 
 ### Features
@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
 
 
 
-## 1.0.0 (2021-04-12)
+### 1.0.0 (2021-04-12)
 
 
 ### Features
