@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 
 
+## 1.0.1 (2021-04-13)
+
+
+### Features
+
+* using the latest snowplow flutter tracker library [WOGAA-4281] ([90f7f6c](https://bitbucket.ship.gov.sg///commit/90f7f6c278746562772ebb81028c96594dad6d2f))
+
+
+
 ## 1.0.0 (2021-04-12)
 
 
