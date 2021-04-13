@@ -111,7 +111,7 @@ packages:
     dependency: transitive
     description:
       path: "."
-      ref: develop
+      ref: "v0.11.0+1"
       resolved-ref: b10d54e876b24c46cf59834b558501bab7e13a1a
       url: "https://github.com/chukyihjou-govtech/snowplow-flutter-tracker.git"
     source: git
@@ -178,7 +178,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.0"
+    version: "1.0.1"
 sdks:
   dart: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
