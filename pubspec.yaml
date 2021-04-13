@@ -19,7 +19,7 @@ dependencies:
   snowplow_flutter_tracker:
     git:
       url: https://github.com/chukyihjou-govtech/snowplow-flutter-tracker.git
-      ref: develop
+      ref: v0.11.0+1
 
 dev_dependencies:
   flutter_test:

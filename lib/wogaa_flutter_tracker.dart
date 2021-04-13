@@ -57,7 +57,7 @@ class Tracker {
     _tracker = sp.SnowplowFlutterTracker();
     _tracker.initialize(tracker);
 
-    print('Started (0.0.4)');
+    print('Started (1.0.1)');
   }
 
   static void trackScreenView(String screenName) {

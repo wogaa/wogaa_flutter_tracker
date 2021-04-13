@@ -97,7 +97,7 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: develop
+      ref: "v0.11.0+1"
       resolved-ref: b10d54e876b24c46cf59834b558501bab7e13a1a
       url: "https://github.com/chukyihjou-govtech/snowplow-flutter-tracker.git"
     source: git
