@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+### [1.0.2](https://bitbucket.ship.gov.sg///compare/v1.0.1...v1.0.2) (2021-04-15)
+
+
+### Features
+
+* update android bundle id [WOGAA-4281] ([5b1f6c5](https://bitbucket.ship.gov.sg///commit/5b1f6c5d27379915e06bcd928b0f1274792f6d50))
+
 ### 1.0.1 (2021-04-13)
 
 
