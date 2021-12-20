@@ -112,7 +112,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "1684e5f80b10cdadddedba55f40fcdb2e9a7098c"
+      resolved-ref: efc8145631497a818c66c8d6c27a2063ccd462fa
       url: "https://github.com/chukyihjou-govtech/snowplow-flutter.git"
     source: git
     version: "1.0.0"
