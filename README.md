@@ -1,6 +1,6 @@
 # WOGAA Flutter Tracker
 
-![Build Status](https://bamboo.ship.gov.sg/plugins/servlet/wittified/build-status/AW-FLUTTER) [![release](https://img.shields.io/badge/release-v1.0.2-green.svg)](https://semver.org)
+![Build Status](https://bamboo.ship.gov.sg/plugins/servlet/wittified/build-status/AW-FLUTTER) [![release](https://img.shields.io/badge/release-v2.0.0-green.svg)](https://semver.org)
 
 Flutter package library for WOGAA tracking
 
@@ -15,7 +15,7 @@ dependencies:
   wogaa_flutter_tracker:
     git:
       url: https://github.com/wogaa/wogaa_flutter_tracker.git
-      ref: v1.0.2
+      ref: v2.0.0
 ```
 
 Install it with flutter:
