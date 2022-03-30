@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 
+## [2.0.0](https://bitbucket.ship.gov.sg/scm/aw/wogaa_flutter_tracker/compare/v1.0.2...v2.0.0) (2022-03-30)
+
 ### [1.0.2](https://bitbucket.ship.gov.sg///compare/v1.0.1...v1.0.2) (2021-04-15)
 
 
