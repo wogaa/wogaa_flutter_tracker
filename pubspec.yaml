@@ -1,12 +1,10 @@
 name: wogaa_flutter_tracker
 description: A new Flutter package project.
-version: 1.0.2
-author:
-homepage:
+version: 2.0.0
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -16,10 +14,10 @@ dependencies:
   flutter:
     sdk: flutter
   package_info: ^2.0.0
-  snowplow_flutter_tracker:
+  snowplow:
     git:
-      url: https://github.com/chukyihjou-govtech/snowplow-flutter-tracker.git
-      ref: v0.11.0+1
+      url: https://github.com/chukyihjou-govtech/snowplow-flutter.git
+      ref: main
 
 dev_dependencies:
   flutter_test:
